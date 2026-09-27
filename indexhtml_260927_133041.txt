@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sam Swahili & Translation | Kenya</title>
+
+<style>
+• {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #faf7ef;
+color: #17352f;
+line-height: 1.6;
+}
+
+.container {
+width: 92%;
+max-width: 1100px;
+margin: auto;
+}
+
+header {
+background: #faf7ef;
+border-bottom: 1px solid #e5dfd2;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.nav {
+min-height: 70px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+font-size: 22px;
+font-weight: bold;
+}
+
+.logo span {
+color: #d59a32;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 22px;
+}
+
+nav a {
+text-decoration: none;
+color: #17352f;
+font-weight: 600;
+}
+
+.btn {
+display: inline-block;
+background: #1d6b52;
+color: white;
+padding: 13px 22px;
+border-radius: 30px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.btn:hover {
+opacity: .9;
+}
+
+.btn-outline {
+background: transparent;
+color: #1d6b52;
+border: 1px solid #1d6b52;
+}
+
+/* HERO */
+
+.hero {
+padding: 80px 0;
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+align-items: center;
+}
+
+.eyebrow {
+color: #1d6b52;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 13px;
+margin-bottom: 15px;
+}
+
+h1 {
+font-size: clamp(42px, 7vw, 76px);
+line-height: 1;
+margin-bottom: 25px;
+}
+
+h1 span {
+color: #1d6b52;
+}
+
+.hero p {
+color: #65716d;
+font-size: 18px;
+margin-bottom: 28px;
+}
+
+.buttons {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.hero-card {
+min-height: 420px;
+border-radius: 30px;
+background: linear-gradient(145deg, #174c3d, #2d8064);
+padding: 30px;
+color: white;
+position: relative;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.hero-card:before {
+content: "";
+position: absolute;
+width: 280px;
+height: 280px;
+border-radius: 50%;
+background: #d59a32;
+right: -100px;
+top: -80px;
+}
+
+.hero-card h2 {
+font-size: 35px;
+line-height: 1.15;
+position: relative;
+z-index: 2;
+max-width: 380px;
+}
+
+.badge {
+background: rgba(255,255,255,.15);
+padding: 10px 15px;
+border-radius: 15px;
+width: fit-content;
+position: relative;
+z-index: 2;
+}
+
+.quote {
+background: white;
+color: #17352f;
+padding: 18px;
+border-radius: 18px;
+position: relative;
+z-index: 2;
+}
+
+/* SECTIONS */
+
+section {
+padding: 80px 0;
+}
+
+.white {
+background: white;
+}
+
+.section-title {
+max-width: 650px;
+margin-bottom: 40px;
+}
+
+.section-title h2 {
+font-size: 42px;
+line-height: 1.1;
+margin-bottom: 12px;
+}
+
+.section-title p {
+color: #68746f;
+}
+
+/* SERVICES */
+
+.services {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+}
+
+.service {
+padding: 30px;
+border: 1px solid #e5dfd2;
+border-radius: 25px;
+background: white;
+}
+
+.icon {
+font-size: 38px;
+margin-bottom: 15px;
+}
+
+.service h3 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.service p {
+color: #68746f;
+}
+
+.service a {
+display: inline-block;
+margin-top: 18px;
+color: #1d6b52;
+font-weight: bold;
+}
+
+/* ABOUT */
+
+.about-grid {
+display: grid;
+grid-template-columns: .8fr 1.2fr;
+gap: 50px;
+align-items: center;
+}
+
+.about-image {
+min-height: 350px;
+border-radius: 30px;
+background: linear-gradient(135deg,#d59a32,#f1d79e);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 90px;
+}
+
+.about h2 {
+font-size: 44px;
+line-height: 1.1;
+margin-bottom: 18px;
+}
+
+.about p {
+color: #68746f;
+margin-bottom: 20px;
+}
+
+.points {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+margin-bottom: 25px;
+}
+
+.point {
+font-weight: bold;
+}
+
+.point:before {
+content: "✓";
+color: #d59a32;
+margin-right: 8px;
+}
+
+/* PRICING */
+
+.pricing {
+background: #17352f;
+color: white;
+}
+
+.pricing .section-title p {
+color: #c7d4cf;
+}
+
+.prices {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+}
+
+.price {
+background: white;
+color: #17352f;
+border-radius: 25px;
+padding: 30px;
+}
+
+.price.featured {
+border: 3px solid #d59a32;
+}
+
+.price h3 {
+font-size: 22px;
+}
+
+.amount {
+font-size: 38px;
+font-weight: bold;
+margin: 15px 0;
+}
+
+.price ul {
+list-style: none;
+color: #68746f;
+margin-bottom: 25px;
+}
+
+.price li {
+margin: 8px 0;
+}
+
+.price li:before {
+content: "✓ ";
+color: #1d6b52;
+font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact-box {
+background: #faf7ef;
+border: 1px solid #e5dfd2;
+border-radius: 30px;
+padding: 45px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.contact h2 {
+font-size: 45px;
+line-height: 1.1;
+margin-bottom: 15px;
+}
+
+.contact p {
+color: #68746f;
+}
+
+.contact-links {
+display: flex;
+flex-direction: column;
+gap: 15px;
+justify-content: center;
+}
+
+.contact-link {
+background: white;
+padding: 18px;
+border-radius: 15px;
+text-decoration: none;
+color: #17352f;
+font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+background: #17352f;
+color: white;
+text-align: center;
+padding: 30px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+nav {
+display: none;
+}
+
+.hero-grid,
+.about-grid,
+.contact-box {
+grid-template-columns: 1fr;
+}
+
+.services,
+.prices {
+grid-template-columns: 1fr;
+}
+
+.hero {
+padding: 55px 0;
+}
+
+h1 {
+font-size: 48px;
+}
+
+.hero-card {
+min-height: 330px;
+}
+
+.points {
+grid-template-columns: 1fr;
+}
+
+.section-title h2,
+.about h2,
+.contact h2 {
+font-size: 35px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="#" class="logo">
+SAM <span>SWahili</span>
+</a>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+
+<a class="btn"
+href="https://wa.me/254115814063">
+Book on WhatsApp
+</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Swahili • Kenya • Translation
+</div>
+
+<h1>
+Speak with confidence.
+<br>
+<span>Connect with Kenya.</span>
+</h1>
+
+<p>
+Learn Swahili or get practical translation support
+for travelling, business and everyday communication
+in Kenya.
+</p>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://wa.me/254115814063?text=Hello%20Sam%2C%20I%27d%20like%20to%20book%20a%20service.">
+Start on WhatsApp
+</a>
+
+<a class="btn btn-outline"
+href="#services">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<div class="badge">
+🇰🇪 Based in Kenya
+</div>
+
+<h2>
+Learn Swahili.
+Travel easier.
+Communicate better.
+</h2>
+
+<div class="quote">
+“Simple lessons, real conversations,
+practical Kenyan communication.”
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="white">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="eyebrow">
+What I offer
+</div>
+
+<h2>
+Services built around real communication.
+</h2>
+
+<p>
+Choose the service you need and contact me
+directly to arrange your session.
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="service">
+
+<div class="icon">🗣️</div>
+
+<h3>
+Online Swahili Lessons
+</h3>
+
+<p>
+Beginner-friendly Swahili lessons focused on
+speaking, pronunciation, vocabulary and
+everyday conversation.
+</p>
+
+<a href="#contact">
+Book a lesson →
+</a>
+
+</div>
+
+<div class="service">
+
+<div class="icon">🌍</div>
+
+<h3>
+Tourist Translation
+</h3>
+
+<p>
+Practical language assistance for visitors
+who want smoother communication while
+exploring Kenya.
+</p>
+
+<a href="#contact">
+Ask about translation →
+</a>
+
+</div>
+
+<div class="service">
+
+<div class="icon">💼</div>
+
+<h3>
+Business Translation
+</h3>
+
+<p>
+Clear Swahili-English communication for
+messages, conversations, customers and
+business needs.
+</p>
+
+<a href="#contact">
+Request a quote →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+🌍
+</div>
+
+<div class="about">
+
+<div class="eyebrow">
+About Sam
+</div>
+
+<h2>
+Language should open doors,
+not create barriers.
+</h2>
+
+<p>
+I help people communicate in Swahili through
+practical lessons and translation support
+designed around real situations.
+</p>
+
+<div class="points">
+
+<div class="point">
+Practical conversation
+</div>
+
+<div class="point">
+Beginner friendly
+</div>
+
+<div class="point">
+Flexible sessions
+</div>
+
+<div class="point">
+Kenya-focused support
+</div>
+
+</div>
+
+<a class="btn" href="#contact">
+Talk to me
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing" class="pricing">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="eyebrow">
+Simple pricing
+</div>
+
+<h2>
+Start with what fits you.
+</h2>
+
+<p>
+Starter packages for lessons and translation.
+Contact me for customized services.
+</p>
+
+</div>
+
+<div class="prices">
+
+<div class="price">
+
+<h3>
+Swahili Starter
+</h3>
+
+<div class="amount">
+KSh 500
+</div>
+
+<ul>
+<li>30-minute lesson</li>
+<li>Basic vocabulary</li>
+<li>Conversation practice</li>
+</ul>
+
+<a class="btn" href="#contact">
+Book
+</a>
+
+</div>
+
+<div class="price featured">
+
+<h3>
+Swahili Plus
+</h3>
+
+<div class="amount">
+KSh 900
+</div>
+
+<ul>
+<li>60-minute lesson</li>
+<li>Conversation practice</li>
+<li>Personalized learning</li>
+</ul>
+
+<a class="btn" href="#contact">
+Book
+</a>
+
+</div>
+
+<div class="price">
+
+<h3>
+Translation
+</h3>
+
+<div class="amount">
+Quote
+</div>
+
+<ul>
+<li>Tourist support</li>
+<li>Business communication</li>
+<li>Custom translation</li>
+</ul>
+
+<a class="btn" href="#contact">
+Get Quote
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div>
+
+<div class="eyebrow">
+Let's work together
+</div>
+
+<h2>
+Ready to start?
+</h2>
+
+<p>
+Message me directly on WhatsApp to ask a question,
+book a Swahili lesson or request a translation quote.
+</p>
+
+</div>
+
+<div class="contact-links">
+
+<a class="contact-link"
+href="https://wa.me/254115814063?text=Hello%20Sam%2C%20I%27m%20interested%20in%20your%20services.">
+
+📱 WhatsApp: 0115 814 063
+
+</a>
+
+<a class="contact-link"
+href="#pricing">
+
+💰 View Packages
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sam Swahili & Translation • Kenya
+
+</footer>
+
+</body>
+</html>
